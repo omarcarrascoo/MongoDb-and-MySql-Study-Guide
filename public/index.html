@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera base de datos</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <section class="addProduct">
+        <div class="addProduct__container">
+            <h1>Agregar productos</h1>
+            <form onsubmit="return addProduct(this)"class="addProducto__form">
+                <label for="title">Nombre Producto</label>
+                <input type="text" name="title" id="title">
+                <label for="price">Precio</label>
+                <input type="text" name="price" id="price">
+                <label for="img">Imagen</label>
+                <input type="text" name="img" id="img">
+                <button>Añadir</button>
+            </form>
+            <div class="showProducts">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
