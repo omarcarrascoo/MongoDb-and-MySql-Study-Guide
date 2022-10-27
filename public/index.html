@@ -7,7 +7,9 @@
     <title>Primera base de datos</title>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="./index.js"></script>
+    
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="addProduct">
@@ -20,12 +22,18 @@
                 <input type="text" name="price" id="price">
                 <label for="img">Imagen</label>
                 <input type="text" name="img" id="img">
-                <button>Añadir</button>
+                <button>Añadir Producto</button>
             </form>
             <div class="showProducts">
-                
+                <div class="showProducts__container">
+                    <h1>Productos Añadidos</h1>
+                    <div id="productList" class="porductList">
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <script src="./index.js"></script>
 </body>
 </html>

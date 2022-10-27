@@ -9,6 +9,20 @@ const addProduct = (e) => {
     return false;
 }
 
+const render = (productos) => {
+    const html = productos.map((elem, index) => {
+        return (
+            `<div>
+                <strong>${elem.title}</strong>
+                <em>${elem.price}</em>
+            </div>`
+
+        )
+    }).join(" ");
+    document.getElementById('productList').innerHTML = html;
+}
+
 socket.on('productos', (data) =>{
     console.log( data)
+    render(data)
 })

@@ -13,11 +13,10 @@ app.use(express.static('public'))
 httpServer.listen(8080, () =>{
     console.log('Servidor listado en el pueto 8080')
 })
-const pruebaProductos=[]
-const products = ()=>{
+
     knex('productos').select('*')
     .then((data)=>{
-        pruebaProductos = data
+        return products = data
     })
     .catch((error)=>{
         console.log(error);
@@ -25,8 +24,11 @@ const products = ()=>{
     .finally(()=>{
         knex.destroy()
     })
-}
-
+// const products =[
+//     {title: 'Producto MAMP', price :345},
+//     {title: 'Producto MAMP', price :345},
+//     {title: 'Producto MAMP', price :345}
+// ]
 io.on('connection', (cliente)=>{
     
     cliente.emit('productos', products)
