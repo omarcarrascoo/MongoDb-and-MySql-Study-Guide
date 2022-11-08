@@ -1,0 +1,172 @@
+// use ecommerce
+// 'switched to db ecommerce'
+// db.users.insertOne({user:'omaloma', name:'Omar Carrasco', email:'omar@eradigitalsolution.com', psw: 'Oma0202r'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ab66225e6581e6ccfa0c5") }
+// show collections
+// users
+// db.createCollection(products)
+// ReferenceError: products is not defined
+// db.createCollection('products')
+// { ok: 1 }
+// show collections
+// products
+// users
+// db.products.insertMany([{name:'Coca Cola', price 60, category:'bebidas' },{name:'Sprite', price 45, category:'bebidas' }, {name:'Agua', price 40, category:'bebidas' }, {name:'Pulpo del Chef', price 350, category:'maricos' }])
+// db.products.insertMany([{name:'Coca Cola', price 60, category:'bebidas' },{name:'Sprite', price 45, category:'bebidas' }, {name:'Agua', price 40, category:'bebidas' }])
+// db.products.insertMany({name:'Coca Cola', price 60, category:'bebidas' },{name:'Sprite', price 45, category:'bebidas' }, {name:'Agua', price 40, category:'bebidas' })
+// db.products.insertOne([{name:'Coca Cola', price 60, category:'bebidas' })
+// db.products.insertOne({name:'Coca Cola', price 60, category:'bebidas' })
+// {name:"'Coca Cola'", price 60, category:"'bebidas'" }
+// db.products.insertOne({name:"'Coca Cola'", price 60, category:"'bebidas'" })
+// show collections
+// products
+// users
+// db.products.insertOne({name:'Coca Cola', price: 60, category:'bebidas'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac65925e6581e6ccfa0c6") }
+// db.products.insertOne({name:'Seven up', price: 60, category:'bebidas'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac66c25e6581e6ccfa0c7") }
+// db.products.insertOne({name:'Agua', price: 40, category:'bebidas'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac67525e6581e6ccfa0c8") }
+// db.products.insertOne({name:'Pulpo del chef', price: 350, category:'Comida'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac68525e6581e6ccfa0c9") }
+// db.products.insertOne({name:'Mar y tierra', price: 450, category:'comida'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac6a025e6581e6ccfa0ca") }
+// db.products.insertOne({name:'Arrachera', price: 310, category:'comida'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac6b925e6581e6ccfa0cb") }
+// db.products.insertOne({name:'Patel de frutos rojos', price: 550, category:'postres'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac6d725e6581e6ccfa0cc") }
+// db.products.insertOne({name:'Creme Brule', price: 150, category:'postres'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac6ef25e6581e6ccfa0cd") }
+// db.products.insertOne({name:'Helado', price: 100, category:'postres'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac70425e6581e6ccfa0ce") }
+// db.products.insertOne({name:'Botella de vino', price: 1000, category:'alcohol'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac71a25e6581e6ccfa0cf") }
+// db.products.insertOne({name:'Botella Tequila', price: 800, category:'alcohol'})
+// { acknowledged: true,
+//   insertedId: ObjectId("636ac72d25e6581e6ccfa0d0") }
+// db.products.find()
+// { _id: ObjectId("636ac65925e6581e6ccfa0c6"),
+//   name: 'Coca Cola',
+//   price: 60,
+//   category: 'bebidas' }
+// { _id: ObjectId("636ac66c25e6581e6ccfa0c7"),
+//   name: 'Seven up',
+//   price: 60,
+//   category: 'bebidas' }
+// { _id: ObjectId("636ac67525e6581e6ccfa0c8"),
+//   name: 'Agua',
+//   price: 40,
+//   category: 'bebidas' }
+// { _id: ObjectId("636ac68525e6581e6ccfa0c9"),
+//   name: 'Pulpo del chef',
+//   price: 350,
+//   category: 'Comida' }
+// { _id: ObjectId("636ac6a025e6581e6ccfa0ca"),
+//   name: 'Mar y tierra',
+//   price: 450,
+//   category: 'comida' }
+// { _id: ObjectId("636ac6b925e6581e6ccfa0cb"),
+//   name: 'Arrachera',
+//   price: 310,
+//   category: 'comida' }
+// { _id: ObjectId("636ac6d725e6581e6ccfa0cc"),
+//   name: 'Patel de frutos rojos',
+//   price: 550,
+//   category: 'postres' }
+// { _id: ObjectId("636ac6ef25e6581e6ccfa0cd"),
+//   name: 'Creme Brule',
+//   price: 150,
+//   category: 'postres' }
+// { _id: ObjectId("636ac70425e6581e6ccfa0ce"),
+//   name: 'Helado',
+//   price: 100,
+//   category: 'postres' }
+// { _id: ObjectId("636ac71a25e6581e6ccfa0cf"),
+//   name: 'Botella de vino',
+//   price: 1000,
+//   category: 'alcohol' }
+// { _id: ObjectId("636ac72d25e6581e6ccfa0d0"),
+//   name: 'Botella Tequila',
+//   price: 800,
+//   category: 'alcohol' }
+// db.createCollection('messages')
+// { ok: 1 }
+// db.products.countDocuments()
+// 11
+// db.products.find({'price': {$lt:100}})
+// { _id: ObjectId("636ac65925e6581e6ccfa0c6"),
+//   name: 'Coca Cola',
+//   price: 60,
+//   category: 'bebidas' }
+// { _id: ObjectId("636ac66c25e6581e6ccfa0c7"),
+//   name: 'Seven up',
+//   price: 60,
+//   category: 'bebidas' }
+// { _id: ObjectId("636ac67525e6581e6ccfa0c8"),
+//   name: 'Agua',
+//   price: 40,
+//   category: 'bebidas' }
+// db.products.find({$and:[{'price':{$gte:100}},{'price':{$lte:300}}]})
+// { _id: ObjectId("636ac6ef25e6581e6ccfa0cd"),
+//   name: 'Creme Brule',
+//   price: 150,
+//   category: 'postres' }
+// { _id: ObjectId("636ac70425e6581e6ccfa0ce"),
+//   name: 'Helado',
+//   price: 100,
+//   category: 'postres' }
+// db.products.find({'price':{$gt:300}})
+// { _id: ObjectId("636ac68525e6581e6ccfa0c9"),
+//   name: 'Pulpo del chef',
+//   price: 350,
+//   category: 'Comida' }
+// { _id: ObjectId("636ac6a025e6581e6ccfa0ca"),
+//   name: 'Mar y tierra',
+//   price: 450,
+//   category: 'comida' }
+// { _id: ObjectId("636ac6b925e6581e6ccfa0cb"),
+//   name: 'Arrachera',
+//   price: 310,
+//   category: 'comida' }
+// { _id: ObjectId("636ac6d725e6581e6ccfa0cc"),
+//   name: 'Patel de frutos rojos',
+//   price: 550,
+//   category: 'postres' }
+// { _id: ObjectId("636ac71a25e6581e6ccfa0cf"),
+//   name: 'Botella de vino',
+//   price: 1000,
+//   category: 'alcohol' }
+// { _id: ObjectId("636ac72d25e6581e6ccfa0d0"),
+//   name: 'Botella Tequila',
+//   price: 800,
+//   category: 'alcohol' }
+// db.products.find().sort({price:-1}).limit(1) // for MAX
+// { _id: ObjectId("636ac71a25e6581e6ccfa0cf"),
+//   name: 'Botella de vino',
+//   price: 1000,
+//   category: 'alcohol' }
+// db.products.update({},{$set:{"stock": NumberInt(10)}},{upsert:false,multi:true})
+// { acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 11,
+//   modifiedCount: 10,
+//   upsertedCount: 0 }
+// db.products.updateMany({'price': {$gte: 400}}, {$set: {'stock': 0}})
+// { acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 4,
+//   modifiedCount: 4,
+//   upsertedCount: 0 }
+// db.createUser({user:'pepe',pwd:'asd456',roles:[{role:"read", db:"products"}]})
+// { ok: 1 }
